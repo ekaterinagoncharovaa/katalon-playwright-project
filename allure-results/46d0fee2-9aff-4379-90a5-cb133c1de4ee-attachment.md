@@ -1,0 +1,460 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: katalon.spec.ts >> Katalon Website Tests >> Flow 1: Navigate to TestOps product page
+- Location: tests/katalon.spec.ts:20:7
+
+# Error details
+
+```
+Error: expect(locator).toContainText(expected) failed
+
+Locator: locator('h1')
+Timeout: 5000ms
+- Expected substring  - 1
++ Received string     + 3
+
+- Katalon TestOps
++
++                     AI agents in Katalon True Platform help you take control of your testing.
++                 
+
+Call log:
+  - Expect "toContainText" with timeout 5000ms
+  - waiting for locator('h1')
+    8 × locator resolved to <h1 class="text-dark hero-title text-h1">↵                    AI agents in Katalon True Pl…</h1>
+      - unexpected value "
+                    AI agents in Katalon True Platform help you take control of your testing.
+                "
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - link "Contact us" [ref=e7] [cursor=pointer]:
+        - /url: /contact-us?contact_source=top-nav
+      - link "Log in" [ref=e8] [cursor=pointer]:
+        - /url: /sign-in?ref=header_login_btn
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - link "Katalon" [ref=e12] [cursor=pointer]:
+          - /url: /
+          - img "Katalon" [ref=e13]
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: AI >
+            - text:      
+          - generic [ref=e17]:
+            - generic [ref=e18]: True Platform >
+            - text:      
+          - generic [ref=e19]:
+            - generic [ref=e20]: Solutions >
+            - text:           
+          - link "Pricing" [ref=e21] [cursor=pointer]:
+            - /url: /pricing
+            - generic [ref=e23]: Pricing
+          - generic [ref=e24]:
+            - generic [ref=e25]: Resources >
+            - text:      
+      - generic [ref=e26]:
+        - link "Start free trial" [ref=e27] [cursor=pointer]:
+          - /url: /open-true-platform?ref=header_start_free_trial
+        - link "Book a demo" [ref=e28] [cursor=pointer]:
+          - /url: /view-a-demo?contact_source=top-nav
+    - text:        
+  - generic [ref=e29]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - heading "AI agents in Katalon True Platform help you take control of your testing." [level=1] [ref=e35]
+        - paragraph [ref=e36]: Plan, create, manage, and track every test—manual and automated—in one place.
+        - link "Request a demo" [ref=e38] [cursor=pointer]:
+          - /url: "#contact-us"
+      - generic:
+        - generic:
+          - img "test-management_hero visual"
+    - generic [ref=e42]:
+      - heading "Drive quality in a world of AI." [level=2] [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - img "shield-check 1" [ref=e47]
+            - heading "Minimize tool sprawl" [level=5] [ref=e48]
+          - paragraph [ref=e49]: Simplify and scale your testing efforts by unifying manual, automated, and AI-generated tests in one complete platform that eliminates redundant tools across QA teams.
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - img "shield-check 1-1" [ref=e52]
+            - heading "Boost tes t coverage" [level=5] [ref=e53]
+          - paragraph [ref=e54]: Increase confidence with AI-generated tests ensuring full traceability and coverage while providing real-time visibility into testing, quality metrics, and release readiness.
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - img "icon_crystal_ball" [ref=e57]
+            - heading "Combining AI with human expertise" [level=5] [ref=e58]
+          - paragraph [ref=e59]: Every AI-driven action is transparent, traceable, and governed to ensure that it preserves human accountability and each release is delivered with confidence.
+    - generic [ref=e61]:
+      - heading "Orchestrate your AI agents across every part of your testing lifecycle." [level=2] [ref=e62]
+      - generic [ref=e63]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: Manual Testing
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: Tell your AI agent to analyze requirements and create tests for your coverage goals.
+            - paragraph [ref=e72]: Then let it execute manual tests for you - without any test automation involved.
+        - generic [ref=e77]:
+          - generic [ref=e78]: Test Management
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Your one place to plan, create, execute, manage and track all tests.
+            - paragraph [ref=e81]: Use your AI agents to analyze requirements, create tests, automate, and execute them.
+        - generic [ref=e86]:
+          - generic [ref=e87]: Reporting and Analytics
+          - generic [ref=e88]:
+            - paragraph [ref=e89]: Direct your AI agent to provide you insights into testing status.
+            - paragraph [ref=e90]: Create configurable dashboards for real-time visibility into testing progress, coverage gaps, and release readiness.
+      - link "Talk to Sales" [ref=e92] [cursor=pointer]:
+        - /url: "#contact-us"
+    - generic [ref=e94]:
+      - img "bacground" [ref=e95]
+      - generic [ref=e96]:
+        - heading "Explore Katalon True Platform. The agentic platform for the full testing lifecycle." [level=2] [ref=e97]:
+          - text: Explore Katalon True Platform.
+          - text: The agentic platform for the full testing lifecycle.
+        - link "Visit the True Information Center" [ref=e98] [cursor=pointer]:
+          - /url: /true-information-center
+          - text: Visit the True Information Center
+    - generic [ref=e102]:
+      - heading "Jump in and learn more" [level=2] [ref=e104]
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - img "webinar-3" [ref=e107]
+          - heading "Unified Test Management" [level=3] [ref=e108]
+          - paragraph [ref=e109]: See how AI-powered test management replaces spreadsheets and unifies manual and automated testing with real-time quality insights.
+          - link "Watch now" [ref=e111] [cursor=pointer]:
+            - /url: https://katalon.com/webinars/unified-test-management-bridging-the-gap-between-manual-and-automated-quality
+        - generic [ref=e112]:
+          - img "Frame 1618873165-1" [ref=e113]
+          - heading "How does Katalon support the testing lifecycle?" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Hear how the Katalon platform enables you to automate all of your testing no matter the desired approach.
+          - generic [ref=e117] [cursor=pointer]: Watch now
+    - generic [ref=e122]:
+      - heading "Test Management FAQs" [level=2] [ref=e123]
+      - generic [ref=e124]:
+        - generic [ref=e126] [cursor=pointer]:
+          - heading "What is the Katalon True Platform’s test management?" [level=3] [ref=e127]
+          - generic [ref=e128]: +
+        - generic [ref=e130] [cursor=pointer]:
+          - heading "How does the Katalon True Platform improve coverage and release readiness?" [level=3] [ref=e131]
+          - generic [ref=e132]: +
+        - generic [ref=e134] [cursor=pointer]:
+          - heading "How does the Katalon True Platform use AI to improve productivity and decision-making?" [level=3] [ref=e135]
+          - generic [ref=e136]: +
+        - generic [ref=e138] [cursor=pointer]:
+          - heading "Does the Katalon True Platform provide AI-powered reporting and dashboards?" [level=3] [ref=e139]
+          - generic [ref=e140]: +
+        - generic [ref=e142] [cursor=pointer]:
+          - heading "Does the Katalon True Platform support orchestration and scheduling?" [level=3] [ref=e143]
+          - generic [ref=e144]: +
+        - generic [ref=e146] [cursor=pointer]:
+          - heading "Can the Katalon True Platform manage test environments and configurations?" [level=3] [ref=e147]
+          - generic [ref=e148]: +
+        - generic [ref=e150] [cursor=pointer]:
+          - heading "How does the Katalon True Platform help me scale my QA team?" [level=3] [ref=e151]
+          - generic [ref=e152]: +
+        - generic [ref=e154] [cursor=pointer]:
+          - heading "Where can I learn about Katalon True Platform pricing and enterprise services?" [level=3] [ref=e155]
+          - generic [ref=e156]: +
+        - generic [ref=e158] [cursor=pointer]:
+          - heading "What deployment and hosting options are supported?" [level=3] [ref=e159]
+          - generic [ref=e160]: +
+        - generic [ref=e162] [cursor=pointer]:
+          - heading "What security, governance, and data-ownership controls are available?" [level=3] [ref=e163]
+          - generic [ref=e164]: +
+  - contentinfo [ref=e166]:
+    - generic [ref=e167]:
+      - img "katalon_black_logo" [ref=e170]
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - paragraph [ref=e174]: True Platform
+            - generic [ref=e175]:
+              - link "Test Automation with Katalon Studio" [ref=e176] [cursor=pointer]:
+                - /url: /katalon-studio
+                - text: Test Automation
+                - text: with Katalon Studio
+              - link "Test Management" [ref=e177] [cursor=pointer]:
+                - /url: /testops
+              - link "Test Execution Cloud" [ref=e178] [cursor=pointer]:
+                - /url: /testcloud
+              - link "Production Insights" [ref=e179] [cursor=pointer]:
+                - /url: /truetest
+          - generic [ref=e180]:
+            - paragraph [ref=e181]: Solutions
+            - generic [ref=e182]:
+              - link "Katalon AI" [ref=e183] [cursor=pointer]:
+                - /url: /ai-powered-testing-platform
+              - link "Web Testing" [ref=e184] [cursor=pointer]:
+                - /url: /web-testing
+              - link "Mobile Testing" [ref=e185] [cursor=pointer]:
+                - /url: /mobile-testing
+              - link "API Testing" [ref=e186] [cursor=pointer]:
+                - /url: /api-testing
+              - link "Desktop Testing" [ref=e187] [cursor=pointer]:
+                - /url: /desktop-testing
+              - link "Visual Testing" [ref=e188] [cursor=pointer]:
+                - /url: /visual-testing
+              - link "Integrations" [ref=e189] [cursor=pointer]:
+                - /url: /integrations
+          - generic [ref=e190]:
+            - paragraph [ref=e191]: Resources
+            - generic [ref=e192]:
+              - link "True Information Center" [ref=e193] [cursor=pointer]:
+                - /url: /true-information-center
+              - link "Virtual Labs" [ref=e194] [cursor=pointer]:
+                - /url: https://cec.katalon.com
+              - link "Blog" [ref=e195] [cursor=pointer]:
+                - /url: /resources-center/blog
+              - link "Webinars" [ref=e196] [cursor=pointer]:
+                - /url: /webinars
+              - link "Reports" [ref=e197] [cursor=pointer]:
+                - /url: https://katalon.com/reports
+              - link "Software Testing Glossary" [ref=e198] [cursor=pointer]:
+                - /url: /software-testing-glossary
+              - link "Write for us" [ref=e199] [cursor=pointer]:
+                - /url: https://katalon.com/katalon-guest-post-guidelines
+              - link "What is Agentic QA?" [ref=e200] [cursor=pointer]:
+                - /url: /resources-center/blog/what-is-agentic-qa-the-complete-guide-for-2026
+          - generic [ref=e201]:
+            - paragraph [ref=e202]: Support
+            - generic [ref=e203]:
+              - link "Documentation" [ref=e204] [cursor=pointer]:
+                - /url: https://docs.katalon.com
+              - link "Community" [ref=e205] [cursor=pointer]:
+                - /url: https://forum.katalon.com
+              - link "Technical Support" [ref=e206] [cursor=pointer]:
+                - /url: https://katalon-inc.my.site.com/support/
+              - link "Training and Certification" [ref=e207] [cursor=pointer]:
+                - /url: https://academy.katalon.com/
+              - link "Sample Projects on GitHub" [ref=e208] [cursor=pointer]:
+                - /url: https://github.com/katalon-studio
+          - generic [ref=e209]:
+            - paragraph [ref=e210]: Company
+            - generic [ref=e211]:
+              - link "About Katalon" [ref=e212] [cursor=pointer]:
+                - /url: /about-us
+              - link "Events" [ref=e213] [cursor=pointer]:
+                - /url: /events
+              - link "News" [ref=e214] [cursor=pointer]:
+                - /url: /resources-center/blog/tag/news
+              - link "Brand Assets" [ref=e215] [cursor=pointer]:
+                - /url: /brand-assets
+              - link "Partners" [ref=e216] [cursor=pointer]:
+                - /url: /partners
+              - link "Careers" [ref=e217] [cursor=pointer]:
+                - /url: /careers
+              - link "Careers Blog" [ref=e218] [cursor=pointer]:
+                - /url: /careers/blog
+        - generic [ref=e219]:
+          - generic [ref=e221]:
+            - generic [ref=e222]: 1720 Peachtree Street NW, Suite 870, Atlanta, GA 30309
+            - generic [ref=e223]:
+              - text: "General inquiries:"
+              - link "business@katalon.com" [ref=e224] [cursor=pointer]:
+                - /url: mailto:business@katalon.com
+            - generic [ref=e225]:
+              - text: "Legal inquiries:"
+              - link "legal@katalon.com" [ref=e226] [cursor=pointer]:
+                - /url: mailto:legal@katalon.com
+            - generic [ref=e227]:
+              - text: "Partnership inquiries:"
+              - link "partner@katalon.com" [ref=e228] [cursor=pointer]:
+                - /url: mailto:partner@katalon.com
+          - generic [ref=e229]:
+            - generic [ref=e230]:
+              - link "Footer facebook" [ref=e231] [cursor=pointer]:
+                - /url: https://www.facebook.com/KatalonPlatform
+                - generic [ref=e232]: 
+              - link "Footer twitter" [ref=e233] [cursor=pointer]:
+                - /url: https://twitter.com/KatalonPlatform
+                - generic [ref=e234]: 
+              - link "Footer linkedin" [ref=e235] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/katalon/
+                - generic [ref=e236]: 
+              - link "Footer youtube" [ref=e237] [cursor=pointer]:
+                - /url: https://www.youtube.com/@KatalonPlatform
+                - generic [ref=e238]: 
+            - generic [ref=e239]:
+              - link "Legal" [ref=e240] [cursor=pointer]:
+                - /url: /terms
+              - link "Privacy" [ref=e241] [cursor=pointer]:
+                - /url: /terms#privacy-policy
+              - link "Security" [ref=e242] [cursor=pointer]:
+                - /url: /security
+            - paragraph [ref=e243] [cursor=pointer]: Do Not Sell or Share My Personal Information
+            - paragraph [ref=e244]: Copyright © 2026 Katalon, Inc. All rights reserved.
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: Thanks for reaching out!
+                  - generic:
+                    - text: We'll contact you shortly via email.
+                    - text: In the meantime, you can start exploring with a 30-day trial of Studio Enterprise.
+                - generic:
+                  - iframe [ref=e245]:
+                    - generic [active] [ref=f13e1]:
+                      - generic [ref=f13e5]:
+                        - generic [ref=f13e6]:
+                          - generic [ref=f13e13]:
+                            - heading "Get started with Studio" [level=1] [ref=f13e15]
+                            - button "Replay" [ref=f13e16] [cursor=pointer]:
+                              - img [ref=f13e17]
+                          - generic [ref=f13e20]:
+                            - switch "Turn sound on" [ref=f13e21] [cursor=pointer]:
+                              - img [ref=f13e22]
+                              - generic [ref=f13e25]: Sound ON
+                            - switch "Open in fullscreen mode" [ref=f13e26] [cursor=pointer]:
+                              - img [ref=f13e27]
+                        - generic [ref=f13e29]:
+                          - generic [ref=f13e32]:
+                            - generic [ref=f13e34]:
+                              - 'region "Step11: Give your project a name, choose a project type, then click OK" [ref=f13e35]'
+                              - 'region "Step21: Let''s create your first test by clicking on this button to open Web Recorder" [ref=f13e36]'
+                              - 'region "Last step: Click here to create your first test project" [ref=f13e37]'
+                            - button "Hotspot" [ref=f13e39] [cursor=pointer]
+                            - generic [ref=f13e66]:
+                              - img [ref=f13e68]
+                              - tooltip "Click here to create your first test project" [ref=f13e70] [cursor=pointer]:
+                                - generic [ref=f13e71]: Click here to create your first test project
+                          - button "Arcade watermark" [ref=f13e72] [cursor=pointer]:
+                            - img [ref=f13e75]
+                      - alert [ref=f13e80]
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "Your 30-day trial comes with:"
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img "Icon"
+                            - generic: Full access to Studio Enterprise
+                          - generic:
+                            - generic:
+                              - img "Icon"
+                            - generic: Web, mobile, desktop, API testing
+                          - generic:
+                            - generic:
+                              - img "Icon"
+                            - generic: Easy setup, 1-click integrations
+                          - generic:
+                            - generic:
+                              - img "Icon"
+                            - generic: No credit card required
+                      - generic:
+                        - link "Download Studio Enterprise":
+                          - /url: /download
+                          - generic: Download Studio Enterprise
+  - dialog "How does Katalon support the testing lifecycle?":
+    - generic [ref=e251]:
+      - generic "How does Katalon support the testing lifecycle?" [ref=e253]
+      - generic [ref=e255]:
+        - generic [ref=e256]:
+          - generic:
+            - 'button "Play Video: How does Katalon support the testing lifecycle?"'
+        - 'button "Play Video: How does Katalon support the testing lifecycle?" [ref=e258] [cursor=pointer]':
+          - img [ref=e261]
+    - button "Close" [ref=e263] [cursor=pointer]:
+      - img "Click to close video" [ref=e264]
+  - generic [ref=e265] [cursor=pointer]:
+    - button "Cookies Settings" [ref=e267]
+    - text: Cookies Settings
+  - iframe [ref=e271]:
+    - generic [ref=f18e6]:
+      - text: protected by
+      - strong [ref=f18e7]: reCAPTCHA
+  - region "Chat Widget" [ref=e272]:
+    - iframe [ref=e273]:
+      - generic [ref=f21e2]:
+        - generic [ref=f21e6]:
+          - button "Open live chat" [ref=f21e7]:
+            - img "Avatar of Katalon Chat" [ref=f21e13]
+            - generic [ref=f21e14]: Hi there!
+          - button "Close welcome page" [ref=f21e15]:
+            - img [ref=f21e17]
+        - button "Open live chat" [ref=f21e24]:
+          - img [ref=f21e27]
+          - img [ref=f21e34]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | import * as allure from "allure-js-commons";
+  3  | 
+  4  | test.describe('Katalon Website Tests', () => {
+  5  | 
+  6  |   test.beforeEach(async ({ page }) => {
+  7  |     
+  8  |     await allure.step("Open Katalon home page", async () => {
+  9  |       await page.goto('https://katalon.com/');
+  10 |     });
+  11 |     
+  12 |     await allure.step("Handle cookies", async () => {
+  13 |       const acceptCookies = page.locator('#onetrust-accept-btn-handler');
+  14 |       if (await acceptCookies.isVisible()) {
+  15 |         await acceptCookies.click();
+  16 |       }
+  17 |     });
+  18 |   });
+  19 | 
+  20 |   test('Flow 1: Navigate to TestOps product page', async ({ page }) => {
+  21 |     await allure.owner("Ekaterina Goncharova"); // Твое имя как автора
+  22 |     await allure.tags("UI", "Regression", "Product");
+  23 |     await allure.suite("UI Navigation");
+  24 |     await allure.subSuite("Product Pages");
+  25 | 
+  26 |     await allure.step("Hover over Platform menu", async () => {
+  27 |       await page.hover('text=Platform');
+  28 |     });
+  29 | 
+  30 |     await allure.step("Click on TestOps link", async () => {
+  31 |       await page.click('a[href*="/testops"]');
+  32 |     });
+  33 |     
+  34 |     await allure.step("Verify TestOps header is visible", async () => {
+> 35 |       await expect(page.locator('h1')).toContainText('Katalon TestOps');
+     |                                        ^ Error: expect(locator).toContainText(expected) failed
+  36 |     });
+  37 |   });
+  38 | 
+  39 |   test('Flow 2: Check pricing toggle (Failed for Trace)', async ({ page }) => {
+  40 |     await allure.owner("Ekaterina Goncharova");
+  41 |     await allure.tags("UI", "Pricing", "FailedTest");
+  42 |     await allure.suite("UI Navigation");
+  43 |     await allure.subSuite("Pricing Checks");
+  44 | 
+  45 |     await allure.step("Navigate to Pricing page", async () => {
+  46 |       await page.goto('https://katalon.com/pricing/');
+  47 |     });
+  48 | 
+  49 |     await allure.step("Check billing toggle visibility", async () => {
+  50 |       const toggle = page.locator('.billing-cycle-toggle');
+  51 |       await expect(toggle).toBeVisible();
+  52 |     });
+  53 | 
+  54 |     await allure.step("Verify specific text (Expected Failure for Trace)", async () => {
+  55 |       await expect(page.locator('h2').first()).toHaveText('Non-Existent Text', { timeout: 5000 });
+  56 |     });
+  57 |   });
+  58 | });
+```
