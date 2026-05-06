@@ -1,9 +1,9 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ main, master ]
+    branches: [ branch_2, branch_3, branch_4 ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ branch_2, branch_3, branch_4 ]
 jobs:
   test:
     timeout-minutes: 60
@@ -13,12 +13,25 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        
     - name: Install dependencies
       run: npm ci
+      
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
+
+    - name: Install allurectl
+      run: |
+        wget https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_386 -O allurectl
+        chmod +x allurectl
+
+    - name: Run Playwright tests with allurectl
+      env:
+        ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
+        ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
+        ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
+      run: ./allurectl watch -- npx playwright test
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
